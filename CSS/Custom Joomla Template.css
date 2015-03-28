@@ -1,0 +1,1739 @@
+/******************************************************
+ * Community Legal Aid Services Joomla! 1.5 Template
+*****************************************************/
+
+/****** BASIC ELEMENTS ******/
+
+/*** Don't forget to update editor.css if you change these ***/
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background-color: #F4F2E4;
+  padding: 12px;
+  font: normal 0.8em Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+p
+{
+  line-height: 1.4em;
+  margin-bottom: 0.9em;
+}
+
+p.SingleSpace
+{
+  line-height: 1em;
+  margin-bottom: 0em;
+}
+
+p.OneHalfSpace
+{
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+p.ThreeFourthSpace
+{
+  line-height: 1.3em;
+  margin-bottom: 0.6em;  
+}
+
+span.h1
+{
+  font: normal 1.65em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+}
+
+span.h2
+{
+  font: normal 1.35em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+}
+
+span.h3
+{
+  font: normal 1.25em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+}
+
+span.h4
+{
+  font: normal 1.1em Arial, Helvetica, sans-serif;
+  color: #5A4723;
+}
+
+h1
+{
+  font: normal 1.65em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+  margin-bottom: .4em;
+}
+
+h2
+{
+  font: normal 1.35em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+  margin-bottom: .2em;
+}
+
+h3
+{
+  font: normal 1.25em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+  margin-bottom: .2em;
+}
+
+h4
+{
+  font: normal 1.1em Arial, Helvetica, sans-serif;
+  color: #5A4723;
+  margin-bottom: 0;
+}
+
+ul
+{
+  list-style-type: disc;
+}
+
+ul, ol
+{
+  padding-left: 30px;
+  line-height: 1.4em;
+  margin-bottom: 0.9em;
+}
+
+a:link
+{
+  color: #5A4723;
+  text-decoration: underline;
+}
+
+a:visited
+{
+  color: #3D3119;
+  text-decoration: underline;
+}
+
+a:hover, a:active, a:focus
+{
+  background-color: #F4F2E4;
+  color: #364E64;
+}
+
+a:link.NoUnderline, a:visited.NoUnderline, a:hover.NoUnderline, a:active.NoUnderline, a:focus.NoUnderline
+{
+  text-decoration: none;
+}
+
+a:link.Underline, a:visited.Underline, a:hover.Underline, a:active.Underline, a:focus.Underline
+{
+  text-decoration: underline;
+}
+
+h1 a:link, h2 a:link, h3 a:link
+{
+  text-decoration: none;
+}
+
+h1 a:visited, h2 a:visited, h3 a:visited
+{
+  text-decoration: none;
+}
+
+/****** STRUCTURE AND POSITIONS ******/
+
+/*** Main Template Areas ***/
+
+#All  /* The top-level Div right inside Body */
+{
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid #5A4723;
+  background-color: white;
+}
+
+#Header
+{
+  position: relative;
+  width: 100%;  /* Required in IE6 and IE5.5 or overflow: hidden won't work. */
+  overflow: hidden; /* Required to hide overflow of the image if the page is sized smaller than the image width. */
+}
+
+#ContentFor2Columns, #ContentFor3Columns    /* Main content area that contains the Left, Main and Right columns */
+{
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#Left
+{
+  width: 20%;
+  float: left;
+}
+
+#WrapperForMainAndRight   /* Contains the Main and Right columns */
+{
+  margin: 0 0 0 20%;
+  padding-bottom: 1em;
+}
+
+#MainFor2Columns   /* The Center column when Right column is NOT shown */
+{
+  position: relative;
+}
+
+#MainFor3Columns  /* The Center column when Right column is shown */
+{
+  width: 70%;
+  float: left;  
+  position: relative;
+}
+
+#Right
+{
+  width: 29%;  /* This leaves a small margin of error */
+  float: left;
+}
+
+#Footer
+{
+  position: relative;
+  width: 100%;    /* Required in IE6 and IE5.5 or overflow: hidden won't work. */
+  overflow: hidden;  /* Required to keep white space below the footer from showing */
+  border-top: 1px solid #5A4723;
+  padding: 4px 0;
+  background-color: #AA9E6E;
+  color: white;
+  font-size: 0.85em;
+}
+
+#FooterLeft
+{
+  float: left;
+  padding-left: 8px;
+}
+
+#FooterRight
+{
+  float: right;
+  text-align: right;
+  padding-right: 8px;
+}
+
+/*** Defaults for Modules and Components ***/
+
+#Left .Module
+{
+  margin-bottom: 1.2em;
+  margin-left: 16px;
+}
+
+#MainFor2Columns .Component, #MainFor3Columns .Component
+{
+  margin-right: 24px;
+  margin-bottom: 20px;
+  margin-left: 28px;
+}
+
+#Right .Module
+{
+  margin: 0 10px 1.2em 0;
+}
+
+#Right h1
+{
+  font-size: 1.4em;
+}
+
+#Footer p
+{
+  margin-bottom: .15em;
+}
+
+.ModuleMainbelow, ModuleMainbelowinside, ModuleMainbelowfrontpage
+{
+  margin-top: 1em;
+  margin-right: 24px;
+  margin-bottom: 20px;
+  margin-left: 28px;  
+}
+
+/****** COMPONENTS ******/
+
+/*** All Content Components ***/
+
+/* Description */
+
+.Component .Description
+{
+  padding: 0 0 .5em 0;
+  overflow: hidden;
+}
+
+.Component .Description .ImageLeft
+{
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.Component .Description .ImageRight
+{
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.Component .Description .ImageWrap
+{
+  clear:left;
+}
+
+/*** Table of Contents ***/
+
+.TOC
+{
+  float: right;  
+}
+
+.TOC .contenttoc  /* The table element that holds the TOC */
+{
+  margin: 0 1em 1em 1em;
+  border: 1px solid #5A4723;
+  border-collapse: collapse;
+}
+
+.TOC .contenttoc th
+{
+  color: white;
+  background-color: #AA9E6E;
+  font-weight: normal;
+  border: 1px solid #5A4723;
+}
+
+.TOC .contenttoc td
+{
+  padding: 2px;
+}
+
+.TOC .contenttoc th, .TOC .contenttoc td
+{
+  text-align: left;
+  vertical-align: top;
+  margin: 0;
+  padding: .4em .7em .4em .7em;
+}
+
+.TOC .contenttoc .toclink {} /* The anchor element for each link */
+
+.Text .pagenavcounter  /* "Page 1 of 4" */
+{
+  display: none;
+}
+
+.Text .pagenavbar    /* "Prev - Next" */
+{
+  margin-top: 1em;
+}
+
+.Text .pagenavbar a
+{
+  font-weight: bold;
+}
+
+/* Items on Blog or Article Pages */
+
+.Item .Title
+{
+  margin-right: 1em;
+}
+
+.Item .Title .Icons a
+{
+  margin-left: .8em;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.Item .Title .Icons a:hover, .Item .Title .Icons a:active, .Item .Title .Icons a:focus
+{
+  background-color: #F4F2E4;
+  border: 1px solid #E7E2B5;
+}
+
+.Item .Title .Icons img
+{
+  border: 0;
+}
+
+.Item .DateAndAuthor
+{
+  font-size:0.85em;
+  color: #5A4723;
+  margin-bottom: .2em;
+}
+
+.Item .ReadMore
+{
+  background: url(./../images/readmore_blue.png) no-repeat 0 1px;
+  padding-left: 20px;
+  padding-bottom: 2px;
+}
+
+/*** FrontPage ***/
+
+.FrontPageBlog
+{
+  margin-top: 10px;
+}
+
+/*** Blogs ***/
+
+.Blog .Separator
+{
+  display: block;
+  line-height: 2em;
+}
+
+/* Columns and Rows */
+
+.Blog .ColumnCountIs2
+{
+  width: 50%;
+}
+
+.Blog .Column1
+{
+  float: left;
+  padding-right: 10px;
+}
+
+.Blog .Column2
+{
+  float: right;
+  padding-left: 10px;
+}
+
+.Blog .ArticleSeparator
+{
+  display: none;
+}
+
+.Blog .ColumnSeparator
+{
+  display: none;
+}
+
+.Blog .RowSeparator
+{
+  clear: both;
+}
+
+/* Links to More Articles */
+
+.Blog .MoreItems
+{
+  margin: 8px 0;
+}
+
+.Blog .MoreItems ul
+{
+  padding-left: 0;
+  line-height: 1.3em;
+  list-style-type: none;
+}
+
+.Blog .MoreItems li
+{
+  margin-bottom: 6px;
+  background: url(./../images/readmore_blue.png) no-repeat 0 1px;
+  padding-left: 20px;
+  padding-bottom: 2px;
+}
+
+/*** Category Lists ***/
+
+.CategoryList ul
+{
+  list-style-type: none;
+  padding-left: 0;  
+}
+
+.CategoryList .CategoryItem
+{
+  margin-bottom: 1em;
+}
+
+.CategoryList .CategoryItem p.MetaDescription
+{
+  margin-bottom: 0;
+}
+
+/*** Weblinks ***/
+
+.WebLinks .Categories li
+{
+  margin-bottom: .3em;
+}
+
+.WebLinks .Categories .NumberOfLinks
+{
+  font-size: .8em;
+}
+
+
+/*** Contacts ***/
+
+/* List of Contacts */
+
+.Contacts .Header .Number, .Contacts .Row .Number
+{
+  display: none;
+}
+
+.Contacts .Header .Fax, .Contacts .Row .Fax
+{
+  display: none;
+}
+
+.Contacts .Header .Mobile, .Contacts .Row .Mobile
+{
+  display: none;
+}
+
+/* Individual Contacts */
+
+.Contact h1
+{
+  margin-bottom: .2em;
+}
+
+.Contact h2
+{
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.Contact .Address
+{
+	line-height: 1.4em;
+	margin-bottom: 1em;
+}
+
+.Contact .Phones
+{
+  margin-bottom: 1em;
+}
+
+.Contact .Phones td
+{
+  padding: .2em 1em .2em 0;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.Contact .Miscellaneous
+{
+  line-height: 1.4em;
+}
+
+.Contact .PhotoAndvCard
+{
+  float: right;
+  padding: 1em 0 1em 1em;
+}
+
+.Contact .PhotoAndvCard .Photo img
+{
+  border: 1px solid #5A4723;
+}
+
+.Contact .PhotoAndvCard .vCard
+{
+  padding-top: .6em;
+  text-align: center;
+}
+
+.Contact .PhotoAndvCard .vCard img
+{
+  vertical-align: middle;
+}
+
+.Contact .SelectContact
+{
+  margin-top: 1em;
+  border-top: 1px solid #CCCCCC /* #5A4723 */;
+  padding-top: 1em;
+  font-size: .9em;
+  padding-bottom: 1em;
+}
+
+.Contact .SelectContact select
+{
+  vertical-align: middle;
+  font-size: .95em;
+}
+
+/*** News Feeds ***/
+
+/* The list of News Feed categories */
+
+.NewsFeedCategories .Categories li
+{
+  margin-bottom: .3em;
+}
+
+.NewsFeedCategories .Categories .NumberOfLinks
+{
+  font-size: .8em;
+}
+
+/* The list of News Feeds (see ListTable also) */
+
+.NewsFeeds .Feeds li
+{
+  padding-bottom: .2em;
+}
+
+/* The actual news feed */
+
+.NewsFeed .Items
+{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.NewsFeed .Items li
+{
+  margin-top: 1em;
+}
+
+/*** Search ***/
+
+/* Search Form */
+
+.Search .Form .Keywords
+{
+  border: none;
+}
+
+.Search .Form .Keywords legend
+{
+  display: none;
+}
+
+.Search .Form .Keywords label
+{
+  font: normal 1.6em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+}
+
+.Search .Form .Keywords .InputText
+{
+  width: 300px;
+}
+
+.Search .Form .Keywords .ToggleAdvanced
+{
+  font-size: .85em;
+}
+
+/* Advanced Search Options */
+
+.Search .Form .Advanced
+{
+  display: none;
+  padding-bottom: .5em;
+}
+
+.Search .Form .Advanced fieldset
+{
+  margin: .3em 0;
+  padding: .5em;
+}
+
+.Search .Form .Advanced legend
+{
+  font: normal 1em Trebuchet MS, Arial, Helvetica, sans-serif;
+  color: #5A4723;
+  margin-bottom: .3em;
+}
+
+/* Search Results */
+
+.Search .Results
+{
+  margin-top: 1em;
+  border-top: 1px solid #CCCCCC /* #5A4723 */;
+  padding-top: 1em;
+}
+
+.Search .Results h2
+{
+  font: normal 1em Arial, Helvetica, sans-serif;
+  color: black;
+  margin-bottom: 1em;
+}
+
+.Search .Results ol
+{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.Search .Results h3
+{
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.Search .Results .Category
+{
+  display: none;
+}
+
+.Search .Results .highlight
+{
+  font-weight: bold;
+}
+
+/* When No Search Results Are Found */
+
+.Search .NoResults
+{
+  margin-top: 1em;
+  border-top: 1px solid #CCCCCC /* #5A4723 */;
+  padding-top: 1em;
+}
+
+.Search .NoResults h2
+{
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-bottom: .9em;
+}
+
+.Search .NoResults h3
+{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*** User ***/
+
+.User td
+{
+  padding: 2px;
+}
+
+.Login .InputText
+{
+  width: 200px;
+}
+
+/*** Mailto ***/
+
+.Mailto td
+{
+  padding: 2px;
+}
+
+.Mailto .InputText
+{
+  width: 200px;
+}
+
+/*** RSform ***/
+
+.RSFormValidationSign
+{
+	color: red;
+}
+
+input.RSFormThankYouButton
+{
+	margin-left: 28px;
+	border: 1px solid #5A4723;
+	background-color: #E0D7AB;
+	color: #5A4723;
+}
+
+.RSForm input[type=text]
+{
+	border: 1px solid #5A4723;
+	padding: 2px;
+	font-size: 1em;
+}
+
+.RSForm select
+{
+	border: 1px solid #5A4723;
+	padding: 2px;
+	font-size: 1em;
+}
+
+.RSForm textarea
+{
+	border: 1px solid #5A4723;
+	padding: 2px;
+	font-size: 1em;
+}
+
+.RSForm input[type=submit]
+{
+	border: 1px solid #5A4723;
+	background-color: #E0D7AB;
+	color: #5A4723;
+}
+
+/****** USED BY VARIOUS COMPONENT ******/
+
+/*** Filter ***/
+
+.Filter
+{
+  margin: 16px 0 16px 0;
+  padding: 8px 4px 10px 0;
+  border-top: 1px solid #5A4723;
+  border-bottom: 1px solid #5A4723;
+}
+
+.Filter label
+{
+  color: #5A4723;
+  margin-bottom: 4px;
+}
+
+/*** Data Tables (Used by Contacts and Content Categories) ***/
+
+.DataTable
+{
+  width: 100%;
+  border: 1px solid #5A4723;
+  border-collapse: collapse;
+}
+
+.DataTable .Header
+{
+  color: white;
+  background-color: #AA9E6E;
+}
+
+.DataTable .Header th
+{
+  font-weight: normal;
+  border: 1px solid #5A4723;
+}
+
+.DataTable .Header th, .DataTable .Row td
+{
+/*  font-size: .8em; */
+  text-align: left;
+  vertical-align: top;
+  margin: 0;
+  padding: .4em .5em .4em .7em;
+}
+
+.DataTable .Header a:link, .DataTable .Header a:visited
+{
+  color: white;
+}
+
+.DataTable .Header a:hover, .DataTable .Header a:active, .DataTable .Header a:focus
+{
+  color: #5A4723;
+}
+
+.DataTable .Row td
+{
+  padding: .4em .5em .4em .8em;  
+}
+
+.DataTable .RowOdd
+{
+  background-color: White;
+}
+
+.DataTable .RowEven
+{
+  background-color: #F0F0F0;
+}
+
+/*** List Tables (Used by WebLinks and NewsFeeds) ***/
+
+.ListTable
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ListTable .Header
+{
+  color: white;
+  background-color: #AA9E6E;
+}
+
+.ListTable .Header th
+{
+  font-weight: normal;
+  border: 1px solid #5A4723;
+}
+
+.ListTable .Header th, .ListTable .Row td
+{
+  text-align: left;
+  vertical-align: top;
+  margin: 0;
+}
+
+.ListTable .Header th, .ListTable .Row td
+{
+  padding: .4em 0 .4em 0;
+}
+
+.ListTable .Header a:link, .ListTable .Header a:visited
+{
+  color: white;
+}
+
+.ListTable .Header a:hover, .ListTable .Header a:active, .ListTable .Header a:focus
+{
+  color: #5A4723;
+}
+
+.ListTable .Row td
+{
+  padding: .4em 0 .6em 0;
+}
+
+/*** Paging ***/
+
+.Paging
+{
+  margin-top: 1em;
+  border-top: 1px solid #CCCCCC /* #5A4723 */;
+  padding: .8em 0 0 0;
+}
+
+/* The text for 'Page 1 of 3' */
+
+.Paging .Counter
+{
+  display: none;
+  float: left;
+  margin: 4px 0;
+  padding: 3px 0;
+}
+
+/* The links for 'Start Prev 1 2 3 Next End' */
+
+.Paging .Links
+{
+  float: left;
+}
+
+.Paging .Links .Link
+{
+  float: left;
+  margin: 4px 6px;
+}
+
+.Paging .Links .Link a
+{
+  display: block;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+/* The links for the page numbers */
+
+.Paging .Links .Pages a:link, .Paging .Pages a:visited
+{
+  border: 1px solid #5A4723;
+  background-color: white;
+  color: #5A4723;
+  text-decoration: none;
+}
+
+.Paging .Links .Pages a:hover, .Paging .Pages a:active, .Paging .Pages a:focus
+{
+  
+  border: 1px solid #5A4723;
+  background-color: #5A4723;
+  color: white;
+  text-decoration: none;
+}
+
+.Paging .Links .Pages .Active
+{
+  color: white;
+  border: 1px solid #5A4723;
+  background-color: #AA9E6E;
+  padding: 2px 8px;
+}
+
+/* The links for 'Start Prev Next End' */
+
+.Paging .Links .Buttons a
+{
+  display: block;
+  padding: 2px 0px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.Paging .Links .Buttons a:link, .Paging .Links .Buttons a:visited
+{
+  background-color: transparent;
+  color: #5A4723;
+  text-decoration: underline;
+}
+
+.Paging .Links .Buttons a:hover, .Paging .Links .Buttons a:active, .Paging .Links .Buttons a:focus
+{
+  background-color: #F4F2E4;
+  color: #5A4723;
+  text-decoration: underline;
+}
+
+.Paging .Links .Buttons .Off
+{
+  display: none;
+}
+
+.Paging .Links .Buttons .Start, .Paging .Buttons .End
+{
+  display: none;
+}
+
+/* The drop-down menu for number of items to display per page (used by WebLinks) */
+
+.Paging .Display
+{
+  float: right;
+  padding-top: 2px;
+  margin-bottom: 2em;
+}
+
+.Paging .Display label
+{
+  color: #5A4723;
+}
+
+/****** MODULES ******/
+
+/*** Main Menu ***/
+
+.ModuleMainMenu
+{
+	margin: 0 0 1.2em 16px;
+}
+
+.ModuleMainMenu h1
+{
+  font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  color: #5A4723;
+  margin: 0;
+  padding: 0 0 2px 0;
+}
+
+/* Top level menu items */
+
+.ModuleMainMenu ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ModuleMainMenu ul li a
+{
+  display: block;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+.ModuleMainMenu ul li a:link, .ModuleMainMenu  ul li a:visited
+{
+  background-color: #E0D7AB;
+  color: #5A4723;
+  border-left: 0;
+  border-bottom: solid 1px #DBD5B7;
+  border-right: solid 1px #DBD5B7;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li a:hover, .ModuleMainMenu  ul li a:active, .ModuleMainMenu ul li a:focus
+{
+  background-color: #5A4723;
+  color: white;
+  border-left: 0;
+  border-bottom: solid 1px #5A4723;
+  border-right: solid 1px #5A4723;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li.active a:link, .ModuleMainMenu  ul li.active a:visited
+{
+  background-color: #AA9E6E;
+  color: white;
+  border-left: solid 6px #5A4723;
+  border-bottom: solid 0px #AA9E6E;
+  border-right: solid 1px #AA9E6E;
+  padding: 4px 10px 5px 4px;
+}
+
+/* Second level menu items */
+
+.ModuleMainMenu ul li.active ul
+{
+  list-style-type: none;
+  padding: 0 0 0 6px;
+  margin: 0;
+}
+
+.ModuleMainMenu ul li.active ul li a
+{
+  display: block;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+.ModuleMainMenu ul li.active ul li a:link, .ModuleMainMenu ul li.active ul li a:visited
+{
+  background-color: #E0D7AB;
+  color: #5A4723;
+  border-left: 0;
+  border-bottom: solid 1px #DBD5B7;
+  border-right: solid 1px #DBD5B7;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li.active ul li a:hover, .ModuleMainMenu ul li.active ul li a:active, .ModuleMainMenu ul li.active ul li a:focus
+{
+  background-color: #5A4723;
+  color: white;
+  border-left: 0;
+  border-bottom: solid 1px #5A4723;
+  border-right: solid 1px #5A4723;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li.active ul li.active a:link, .ModuleMainMenu ul li.active ul li.active a:visited
+{
+  background-color: #AA9E6E;
+  color: white;
+  border-left: solid 6px #5A4723;
+  border-bottom: solid 0px #AA9E6E;
+  border-right: solid 1px #AA9E6E;
+  padding: 4px 10px 5px 4px;
+}
+
+/* Third level menu items */
+
+.ModuleMainMenu ul li.active ul li.active ul
+{
+  list-style-type: none;
+  padding: 0 0 0 6px;
+  margin: 0;
+}
+
+.ModuleMainMenu ul li.active ul li.active ul li a
+{
+  display: block;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+.ModuleMainMenu ul li.active ul li.active ul li a:link, .ModuleMainMenu ul li.active ul li.active ul li a:visited
+{
+  background-color: #E0D7AB;
+  color: #5A4723;
+  border-left: 0;
+  border-bottom: solid 1px #DBD5B7;
+  border-right: solid 1px #DBD5B7;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li.active ul li.active ul li a:hover, .ModuleMainMenu ul li.active ul li.active ul li a:active, .ModuleMainMenu ul li.active ul li.active ul li a:focus
+{
+  background-color: #5A4723;
+  color: white;
+  border-left: 0;
+  border-bottom: solid 1px #5A4723;
+  border-right: solid 1px #5A4723;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleMainMenu ul li.active ul li.active ul li.active a:link, .ModuleMainMenu ul li.active ul li.active ul li.active a:visited
+{
+  background-color: #AA9E6E;
+  color: white;
+  border-left: solid 6px #5A4723;
+  border-bottom: solid 0px #AA9E6E;
+  border-right: solid 1px #AA9E6E;
+  padding: 4px 10px 5px 4px;
+}
+
+/*** Custom Menu ***/
+
+.ModuleCustomMenu h1
+{
+  font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+  font-size: 1.4em !important;
+  color: #364E64 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 0 2px 0 !important;
+}
+
+/* Top level menu items */
+
+.ModuleCustomMenu ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ModuleCustomMenu ul li a
+{
+  display: block;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+.ModuleCustomMenu ul li a:link, .ModuleCustomMenu  ul li a:visited
+{
+  background-color: #AABACE;
+  color: #364E64;
+  border-left: 0;
+  border-bottom: solid 1px #AABACE;
+  border-right: solid 1px #AABACE;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleCustomMenu ul li a:hover, .ModuleCustomMenu  ul li a:active, .ModuleCustomMenu ul li a:focus
+{
+  background-color: #4B617D;
+  color: white;
+  border-left: 0;
+  border-bottom: solid 1px #4B617D;
+  border-right: solid 1px #4B617D;
+  padding: 4px 10px 4px 10px;
+}
+
+.ModuleCustomMenu ul li.active a:link, .ModuleCustomMenu  ul li.active a:visited
+{
+  background-color: #6D87A8;
+  color: white;
+  border-left: solid 6px #4B617D;
+  border-bottom: solid 0px #6D87A8;
+  border-right: solid 1px #6D87A8;
+  padding: 4px 10px 5px 4px;
+}
+
+/*** Footer Menu Items ***/
+
+#Footer ul.menu
+{
+	margin-bottom: 0;
+}
+
+#Footer ul.menu li
+{
+	margin-left: 1em;
+	list-style: none;
+	display: inline;
+}
+
+#Footer ul.menu a:link, #Footer ul.menu a:visited
+{
+	color: #5A4723;
+}
+
+#Footer ul.menu a:hover, #Footer ul.menu a:active, #Footer ul.menu a:focus
+{
+	color: #364E64;
+}
+
+/*** Search Box (through the Search Module) ***/
+
+.SearchBox label
+{
+  display: none;
+}
+
+.SearchBox .InputText
+{
+  vertical-align: middle;
+}
+
+.SearchBox .InputImage
+{
+  vertical-align: middle;
+  margin-left: .5em;
+}
+
+.SearchBox .InputSubmit
+{
+  vertical-align: middle;
+  margin-left: .5em;
+}
+
+/*** Breadcrumbs ***/
+
+.ModuleBreadcrumbs
+{
+  margin-top: 20px;
+  margin-right: 24px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+}
+
+.Breadcrumbs
+{
+  font-size: 0.85em;
+  color: #5A4723;
+  display: block;
+}
+
+.Breadcrumbs a:link, .Breadcrumbs a:visited
+{
+	color: #5A4723;
+}
+
+/*** Latest News and Most Read Modules ***/
+
+.ModuleLatestNews
+{
+	background: #F4F2E4 url(./../images/module_background.gif) repeat-x bottom;
+	border: 1px solid #5A4723;
+	padding: 10px 12px; 
+}
+
+.ModuleLatestNews a:hover, .ModuleLatestNews a:active, .ModuleLatestNews a:focus
+{
+	background-color: #E0D7AB;
+}
+
+ul.LatestNews
+{
+  color: #5A4723;
+  padding-left: 16px;
+  line-height: 1.3em;
+  margin-bottom: 0em;
+  font-size: .9em;
+}
+
+ul.LatestNews li
+{
+  margin-bottom: 0.2em;
+}
+
+.ModuleLatestNews .FeedLink
+{
+	background-image: url(./../images/feed.png);
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	margin-top: .8em;
+}
+
+.ModuleLatestNews .EmailLink
+{
+	background-image: url(./../images/email.png);
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	margin-top: .8em;
+}
+
+.ModuleLatestNews .TwitterLink
+{
+	background-image: url(./../images/twitter.png);
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	margin-top: .8em;
+}
+
+.ModuleLatestNews .FacebookLink
+{
+	background-image: url(./../images/facebook.png);
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	margin-top: .8em;
+}
+
+/*** Related Items Module ***/
+
+.ModuleRelatedItems, .ModuleMostRead
+{
+	border-top: 1px solid #CCCCCC;
+	padding-top: 8px;
+}
+
+.ModuleRelatedItems h1, .ModuleMostRead h1
+{
+	margin-bottom: .2em;
+	font-size: 1.35em;
+}
+
+.ModuleRelatedItems li, .ModuleMostRead li
+{
+	margin-bottom: .2em;
+}
+
+/*** Most Read Module ***/
+
+.ModuleRelatedItems, .ModuleMostRead
+{
+	border-top: 1px solid #CCCCCC;
+	padding-top: 1em;
+}
+
+.ModuleRelatedItems h1, .ModuleMostRead h1
+{
+	margin-bottom: .2em;
+	font-size: 1.35em;
+}
+
+.ModuleRelatedItems li, .ModuleMostRead li
+{
+	margin-bottom: .2em;
+}
+
+/*** Generic Gradient Background Module ***/
+
+.ModuleGradient
+{
+	background: #F4F2E4 url(./../images/module_background.gif) repeat-x bottom;
+	border: 1px solid #5A4723;
+	padding: 10px 12px; 
+}
+
+.ModuleGradient a:hover, .ModuleGradient a:active, .ModuleGradient a:focus
+{
+	background-color: #E0D7AB;
+}
+
+/****** MISCELLANEOUS ******/
+
+/*** Forms ***/
+
+.InputText, input[type=text], textarea
+{
+  border: 1px solid #5A4723;
+  padding: 2px;
+  font-size: 1em;
+}
+
+textarea	/* Firefox seems to need this */
+{
+	font: normal 1em Arial, Helvetica, sans-serif;
+}
+
+.InputGhosted
+{
+  color: #AAAAAA;
+}
+
+.InputSubmit, input[type=submit], button
+{
+	border: 1px solid #5A4723;
+	background-color: #E0D7AB;
+	color: #5A4723;
+}
+
+/*** Edit Icons on the Front End ***/
+
+.EditIcon
+{
+	float: left;
+	margin-right: .5em;
+	margin-top: 2px;
+}
+
+.CategoryList .CategoryItem .EditIcon
+{
+	margin-top: 0;
+}
+
+.EditIcon a
+{
+	display: block;
+	background-color: transparent;
+	border: 1px solid white;
+	padding-bottom: 2px;
+}
+
+.EditIcon a:hover, .EditIcon a:active, .EditIcon a:focus
+{
+	background-color: #F4F2E4;
+	border: 1px solid #E7E2B5;
+}
+
+.EditIcon img
+{
+  border: none;
+}
+
+.CreateIcon a
+{
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+/*** Article Submission Page ***/
+
+.ArticleSubmit fieldset
+{
+	margin: 0 0 .5em 0;
+	padding: .5em 2em 1em 1.5em;
+}
+
+.ArticleSubmit legend
+{
+	font: normal 1em Trebuchet MS, Arial, Helvetica, sans-serif;
+	color: #5A4723;
+	margin-bottom: .3em;
+}
+
+.ArticleSubmit #title, .ArticleSubmit #metadesc, .ArticleSubmit #metakey
+{
+	width: 100%;
+}
+
+fieldset.SubmitPublishing table td
+{
+	vertical-align: middle;
+	padding: 0 .5em .5em 0;
+}
+
+fieldset.SubmitMetadata textarea
+{
+	margin-bottom: .4em;
+}
+
+.ArticleSubmit button
+{
+	margin-left: 1em;
+	padding: .1em 2em;
+}
+
+/*** Built-in Joomla Controls ***/
+
+#editor-xtd-buttons
+{
+	padding: .5em 0 .5em 0;
+}
+
+#editor-xtd-buttons div.button2-left
+{
+	float: left;
+	padding: 0 1em 0 0;	
+}
+
+img.calendar
+{
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+	margin-top: 3px;
+	background: url(../images/images_general/calendar.png) no-repeat;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+/*** System Messages ***/
+
+#system-message dt
+{
+  display: none;
+}
+
+#system-message dd ul
+{
+  list-style-type: none;
+  margin: 20px 24px 20px 24px;
+  padding: 8px 12px 10px 54px;
+  font-weight: bold;
+  min-height: 40px;
+}
+
+/* Info (Blue) */
+#system-message dd.message ul
+{
+  color: #0055BB;
+  background: #C3D2E5 url(./../images/message.png) 8px 12px no-repeat;
+  border-top: 3px solid #84A7DB;
+  border-bottom: 3px solid #84A7DB;
+}
+
+/* Warning (Yellow) */
+#system-message dd.notice ul
+{
+  color: #FE9A00;
+  background: #EFE7B8 url(./../images/notice.png) 8px 12px no-repeat;
+  border-top: 3px solid #F0DC7E;
+  border-bottom: 3px solid #F0DC7E;
+}
+
+/* Error (Red) */
+#system-message dd.error ul
+{
+  color: #c00;
+  background: #E6C0C0 url(./../images/error.png) 8px 12px no-repeat;
+  border-top: 3px solid #DE7A7B;
+  border-bottom: 3px solid #DE7A7B;
+}
+
+/*** Tooltips ***/
+
+.tool-tip
+{
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+	text-align:left;
+	font-size: 0.8em;
+}
+
+.tool-title
+{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../../system/images/selector-arrow.png) no-repeat;
+}
+
+.tool-text
+{
+	font-size: 100%;
+	margin: 0;
+}
+
+div.tooltip
+{
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+}
+
+div.tooltip h4
+{
+	padding: 0;
+	margin: 0;
+	font-size: 95%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../images/images_general/selector-arrow.png) no-repeat;
+}
+
+div.tooltip p
+{
+	font-size: 90%;
+	margin: 0;
+}
+
+/*** Really Miscellaneous ***/
+
+p.error
+{
+	color:#5A4723;
+	background:#F2E3ED;
+	border-top:3px solid #5A4723;
+	border-bottom:3px solid #5A4723;
+	padding:10px;
+}
+
+.invalid
+{
+	border-color:red !important;
+}
+
+label.invalid
+{
+	color:red;
+}
+
+/*** Utilities ***/
+
+/* Utility class used with Div's for 'clear:both' */
+
+.Wrap
+{
+	border: 0;
+	clear: both;
+	float: none;
+	font-size: 1px;
+	height: 0;
+	line-height: 1px;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+/* Accessibility Menu */
+
+ul.Accessibility
+{
+  position: absolute;
+  top: -9000px;
+  left: -9000px;
+  z-index: 100;
+}
+
+ul.Accessibility a:hover, ul.Accessibility a:active, ul.Accessibility a:focus
+{
+  position: absolute;
+  top: 9010px;
+  left: 9010px;
+  width: 6em;
+  padding: 5px;
+  background-color: #6D87A8; 
+  color: white;
+  border : 2px solid black;
+  font-weight : bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-align: center;
+  z-index : 100;
+}
+
+/*** Component Only Pages (component.php) ***/
+
+body.ComponentOnly
+{
+	background-color: white;
+	padding: 12px 0;
+	font: normal 0.8em Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: left;
+}
+
+/*** Support for TinyMCE and JCE Editor ***/
+
+body.mceContentBody
+{
+	background-color: white;
+	text-align: left;	
+}
